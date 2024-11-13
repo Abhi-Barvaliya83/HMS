@@ -41,15 +41,6 @@ namespace Hostel_Management_System
             this.txtDepartment = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FatherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ContactNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DOB1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -67,6 +58,14 @@ namespace Hostel_Management_System
             this.btnStudent = new System.Windows.Forms.Button();
             this.btnRoom = new System.Windows.Forms.Button();
             this.btnHostel = new System.Windows.Forms.Button();
+            this.StudentsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Student_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FatherName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ContactNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Department = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -195,15 +194,14 @@ namespace Hostel_Management_System
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentID,
             this.StudentsName,
+            this.Student_ID,
             this.FatherName,
             this.Address,
             this.ContactNO,
             this.Age,
             this.DOB1,
-            this.HID,
-            this.RID});
+            this.Department});
             this.dataGridView1.Location = new System.Drawing.Point(382, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -211,78 +209,6 @@ namespace Hostel_Management_System
             this.dataGridView1.Size = new System.Drawing.Size(1185, 468);
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // StudentID
-            // 
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.MinimumWidth = 6;
-            this.StudentID.Name = "StudentID";
-            this.StudentID.ReadOnly = true;
-            this.StudentID.Width = 125;
-            // 
-            // StudentsName
-            // 
-            this.StudentsName.HeaderText = "StudentsName";
-            this.StudentsName.MinimumWidth = 6;
-            this.StudentsName.Name = "StudentsName";
-            this.StudentsName.ReadOnly = true;
-            this.StudentsName.Width = 125;
-            // 
-            // FatherName
-            // 
-            this.FatherName.HeaderText = "FatherName";
-            this.FatherName.MinimumWidth = 6;
-            this.FatherName.Name = "FatherName";
-            this.FatherName.ReadOnly = true;
-            this.FatherName.Width = 125;
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "Address";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 125;
-            // 
-            // ContactNO
-            // 
-            this.ContactNO.HeaderText = "ContactNO";
-            this.ContactNO.MinimumWidth = 6;
-            this.ContactNO.Name = "ContactNO";
-            this.ContactNO.ReadOnly = true;
-            this.ContactNO.Width = 125;
-            // 
-            // Age
-            // 
-            this.Age.HeaderText = "Age";
-            this.Age.MinimumWidth = 6;
-            this.Age.Name = "Age";
-            this.Age.ReadOnly = true;
-            this.Age.Width = 125;
-            // 
-            // DOB1
-            // 
-            this.DOB1.HeaderText = "DOB1";
-            this.DOB1.MinimumWidth = 6;
-            this.DOB1.Name = "DOB1";
-            this.DOB1.ReadOnly = true;
-            this.DOB1.Width = 125;
-            // 
-            // HID
-            // 
-            this.HID.HeaderText = "HID";
-            this.HID.MinimumWidth = 6;
-            this.HID.Name = "HID";
-            this.HID.ReadOnly = true;
-            this.HID.Width = 125;
-            // 
-            // RID
-            // 
-            this.RID.HeaderText = "RID";
-            this.RID.MinimumWidth = 6;
-            this.RID.Name = "RID";
-            this.RID.ReadOnly = true;
-            this.RID.Width = 125;
             // 
             // Delete
             // 
@@ -458,6 +384,76 @@ namespace Hostel_Management_System
             this.btnHostel.UseVisualStyleBackColor = true;
             this.btnHostel.Click += new System.EventHandler(this.btnHostel_Click);
             // 
+            // StudentsName
+            // 
+            this.StudentsName.DataPropertyName = "StudentName";
+            this.StudentsName.HeaderText = "StudentsName";
+            this.StudentsName.MinimumWidth = 6;
+            this.StudentsName.Name = "StudentsName";
+            this.StudentsName.ReadOnly = true;
+            this.StudentsName.Width = 125;
+            // 
+            // Student_ID
+            // 
+            this.Student_ID.DataPropertyName = "StudentID";
+            this.Student_ID.HeaderText = "Student Id";
+            this.Student_ID.MinimumWidth = 6;
+            this.Student_ID.Name = "Student_ID";
+            this.Student_ID.Width = 125;
+            // 
+            // FatherName
+            // 
+            this.FatherName.DataPropertyName = "FatherName";
+            this.FatherName.HeaderText = "FatherName";
+            this.FatherName.MinimumWidth = 6;
+            this.FatherName.Name = "FatherName";
+            this.FatherName.ReadOnly = true;
+            this.FatherName.Width = 125;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "Address";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 125;
+            // 
+            // ContactNO
+            // 
+            this.ContactNO.DataPropertyName = "ContactNo";
+            this.ContactNO.HeaderText = "ContactNO";
+            this.ContactNO.MinimumWidth = 6;
+            this.ContactNO.Name = "ContactNO";
+            this.ContactNO.ReadOnly = true;
+            this.ContactNO.Width = 125;
+            // 
+            // Age
+            // 
+            this.Age.DataPropertyName = "Age";
+            this.Age.HeaderText = "Age";
+            this.Age.MinimumWidth = 6;
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
+            this.Age.Width = 125;
+            // 
+            // DOB1
+            // 
+            this.DOB1.DataPropertyName = "DOB";
+            this.DOB1.HeaderText = "DOB1";
+            this.DOB1.MinimumWidth = 6;
+            this.DOB1.Name = "DOB1";
+            this.DOB1.ReadOnly = true;
+            this.DOB1.Width = 125;
+            // 
+            // Department
+            // 
+            this.Department.DataPropertyName = "Department";
+            this.Department.HeaderText = "Department";
+            this.Department.MinimumWidth = 6;
+            this.Department.Name = "Department";
+            this.Department.Width = 125;
+            // 
             // Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -511,14 +507,13 @@ namespace Hostel_Management_System
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker DOB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentsName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn FatherName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn ContactNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOB1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Department;
     }
 }
