@@ -8,6 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using CrystalDecisions.CrystalReports.Engine;
+using CrystalDecisions.Shared;
+
 
 namespace Hostel_Management_System
 {
@@ -21,6 +25,15 @@ namespace Hostel_Management_System
         int FeeId;
 
         DBconnect con = new DBconnect();
+        SqlDataAdapter da;
+        DataSet ds;
+
+
+
+        private CrystalDecisions.CrystalReports.Engine.ReportDocument cr = new CrystalDecisions.CrystalReports.Engine.ReportDocument();
+
+        static string Crypath = "";
+
 
         private void btnHostel_Click(object sender, EventArgs e)
         {
@@ -118,8 +131,36 @@ namespace Hostel_Management_System
             MessageBox.Show("Data Deleted!");
 
             fillg();
-
             clear();
+
+        }
+
+        private void Fee_Load(object sender, EventArgs e)
+        {
+            fillg();
+        }
+
+        private void btnreport_Click(object sender, EventArgs e)
+        {
+            string query = "select * from fee_tbl";
+            da = con.selectDA(query);
+            ds = new DataSet();
+            da.Fill(ds);
+            string xml = @"C:\Users\vansh\source\repos\HMS\Hostel Management System\fee.xml";
+            ds.WriteXmlSchema(xml);
+
+            Crypath = @"C:\Users\vansh\source\repos\HMS\Hostel Management System\FeeReport1.rpt";
+            cr.Load(Crypath);
+            cr.SetDataSource(ds);
+            cr.Database.Tables[0].SetDataSource(ds);
+            cr.Refresh();
+            crystalReportViewer1.ReportSource = cr;
+
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

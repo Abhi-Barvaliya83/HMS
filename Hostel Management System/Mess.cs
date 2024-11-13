@@ -21,12 +21,6 @@ namespace Hostel_Management_System
         int MessId;
         DBconnect con = new DBconnect();
 
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnHostel_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -65,7 +59,7 @@ namespace Hostel_Management_System
 
         private void Mess_Load(object sender, EventArgs e)
         {
-
+            fillGrid();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -83,11 +77,8 @@ namespace Hostel_Management_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string query = $"UPDATE Mess SET MessName = '{txtMessName.Text}', " +
-                               $"MessCapacity = {txtMessCapacity.Text}, " +
-                               $"MessExpense = {txtMessExpense.Text}, " +
-                               $"Location = '{txtLocation.Text}' " +
-                               $"WHERE MessID = {MessId}";
+            string query = $"UPDATE Mess SET MessName = '{txtMessName.Text}', MessCapacity = '{txtMessCapacity.Text}', MessExpense = '{txtMessExpense.Text}', Location = '{txtLocation.Text}' WHERE MessID = '{MessId}'";
+
 
             con.update(query).ExecuteNonQuery();
 
@@ -112,18 +103,11 @@ namespace Hostel_Management_System
 
         void fillGrid()
         {
-            try
-            {
                 string query = "SELECT * FROM Mess";
                 SqlDataAdapter da = con.selectDA(query);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
         }
 
         void clear()
@@ -136,12 +120,11 @@ namespace Hostel_Management_System
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MessId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["MessID"].Value);
+            MessId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["MessID1"].Value);
             txtMessName.Text = dataGridView1.Rows[e.RowIndex].Cells["MessName"].Value.ToString();
             txtMessCapacity.Text = dataGridView1.Rows[e.RowIndex].Cells["MessCapacity"].Value.ToString();
             txtMessExpense.Text = dataGridView1.Rows[e.RowIndex].Cells["MessExpense"].Value.ToString();
             txtLocation.Text = dataGridView1.Rows[e.RowIndex].Cells["Location"].Value.ToString();
-
         }
     }
 }

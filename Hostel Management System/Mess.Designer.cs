@@ -30,7 +30,7 @@ namespace Hostel_Management_System
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.MessID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MessID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessCapacity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessExpense = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +65,7 @@ namespace Hostel_Management_System
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.MessID,
+            this.MessID1,
             this.MessName,
             this.MessCapacity,
             this.MessExpense,
@@ -74,49 +74,49 @@ namespace Hostel_Management_System
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(639, 332);
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // MessID
+            // MessID1
             // 
-            this.MessID.HeaderText = "MessID";
-            this.MessID.MinimumWidth = 6;
-            this.MessID.Name = "MessID";
-            this.MessID.ReadOnly = true;
-            this.MessID.Width = 125;
+            this.MessID1.DataPropertyName = "MessID";
+            this.MessID1.HeaderText = "ID";
+            this.MessID1.MinimumWidth = 6;
+            this.MessID1.Name = "MessID1";
+            this.MessID1.Width = 125;
             // 
             // MessName
             // 
-            this.MessName.HeaderText = "MessName";
+            this.MessName.DataPropertyName = "MessName";
+            this.MessName.HeaderText = "Name";
             this.MessName.MinimumWidth = 6;
             this.MessName.Name = "MessName";
-            this.MessName.ReadOnly = true;
             this.MessName.Width = 125;
             // 
             // MessCapacity
             // 
-            this.MessCapacity.HeaderText = "MessCapacity";
+            this.MessCapacity.DataPropertyName = "MessCapacity";
+            this.MessCapacity.HeaderText = "Capacity";
             this.MessCapacity.MinimumWidth = 6;
             this.MessCapacity.Name = "MessCapacity";
-            this.MessCapacity.ReadOnly = true;
             this.MessCapacity.Width = 125;
             // 
             // MessExpense
             // 
-            this.MessExpense.HeaderText = "MessExpense";
+            this.MessExpense.DataPropertyName = "MessExpense";
+            this.MessExpense.HeaderText = "Expense";
             this.MessExpense.MinimumWidth = 6;
             this.MessExpense.Name = "MessExpense";
-            this.MessExpense.ReadOnly = true;
             this.MessExpense.Width = 125;
             // 
             // Location
             // 
+            this.Location.DataPropertyName = "Location";
             this.Location.HeaderText = "Location";
             this.Location.MinimumWidth = 6;
             this.Location.Name = "Location";
-            this.Location.ReadOnly = true;
             this.Location.Width = 125;
             // 
             // Delete
@@ -400,7 +400,7 @@ namespace Hostel_Management_System
         private System.Windows.Forms.Button btnStudent;
         private System.Windows.Forms.Button btnRoom;
         private System.Windows.Forms.Button btnHostel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MessID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MessID1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MessName;
         private System.Windows.Forms.DataGridViewTextBoxColumn MessCapacity;
         private System.Windows.Forms.DataGridViewTextBoxColumn MessExpense;

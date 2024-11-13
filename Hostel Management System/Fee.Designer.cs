@@ -52,12 +52,14 @@ namespace Hostel_Management_System
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.StudentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnreport = new System.Windows.Forms.Button();
+            this.Student_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Student_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fees = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FeesStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HostelID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fee_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hostel_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fee_Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -142,16 +144,17 @@ namespace Hostel_Management_System
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentID,
-            this.StudentName,
+            this.Student_id,
+            this.Student_name,
             this.Fees,
-            this.FeesStatus,
-            this.HostelID,
+            this.Fee_Status,
+            this.Hostel_id,
             this.Fee_Id});
-            this.dataGridView1.Location = new System.Drawing.Point(401, 77);
+            this.dataGridView1.Location = new System.Drawing.Point(400, 66);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(639, 332);
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -282,6 +285,8 @@ namespace Hostel_Management_System
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.crystalReportViewer1);
+            this.panel1.Controls.Add(this.btnreport);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.Delete);
             this.panel1.Controls.Add(this.btnUpdate);
@@ -299,8 +304,9 @@ namespace Hostel_Management_System
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(231, 41);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1062, 474);
+            this.panel1.Size = new System.Drawing.Size(1062, 841);
             this.panel1.TabIndex = 39;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 
@@ -313,45 +319,61 @@ namespace Hostel_Management_System
             this.label3.TabIndex = 25;
             this.label3.Text = "Student ID";
             // 
-            // StudentID
+            // btnreport
             // 
-            this.StudentID.HeaderText = "StudentID";
-            this.StudentID.MinimumWidth = 6;
-            this.StudentID.Name = "StudentID";
-            this.StudentID.ReadOnly = true;
-            this.StudentID.Width = 125;
+            this.btnreport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreport.Location = new System.Drawing.Point(27, 356);
+            this.btnreport.Name = "btnreport";
+            this.btnreport.Size = new System.Drawing.Size(94, 32);
+            this.btnreport.TabIndex = 39;
+            this.btnreport.Text = "Report";
+            this.btnreport.UseVisualStyleBackColor = true;
+            this.btnreport.Click += new System.EventHandler(this.btnreport_Click);
             // 
-            // StudentName
+            // Student_id
             // 
-            this.StudentName.HeaderText = "StudentName";
-            this.StudentName.MinimumWidth = 6;
-            this.StudentName.Name = "StudentName";
-            this.StudentName.ReadOnly = true;
-            this.StudentName.Width = 125;
+            this.Student_id.DataPropertyName = "Student_id";
+            this.Student_id.HeaderText = "StudentID";
+            this.Student_id.MinimumWidth = 6;
+            this.Student_id.Name = "Student_id";
+            this.Student_id.ReadOnly = true;
+            this.Student_id.Width = 125;
+            // 
+            // Student_name
+            // 
+            this.Student_name.DataPropertyName = "Student_name";
+            this.Student_name.HeaderText = "StudentName";
+            this.Student_name.MinimumWidth = 6;
+            this.Student_name.Name = "Student_name";
+            this.Student_name.ReadOnly = true;
+            this.Student_name.Width = 125;
             // 
             // Fees
             // 
+            this.Fees.DataPropertyName = "Fees";
             this.Fees.HeaderText = "Fees";
             this.Fees.MinimumWidth = 6;
             this.Fees.Name = "Fees";
             this.Fees.ReadOnly = true;
             this.Fees.Width = 125;
             // 
-            // FeesStatus
+            // Fee_Status
             // 
-            this.FeesStatus.HeaderText = "FeesStatus";
-            this.FeesStatus.MinimumWidth = 6;
-            this.FeesStatus.Name = "FeesStatus";
-            this.FeesStatus.ReadOnly = true;
-            this.FeesStatus.Width = 125;
+            this.Fee_Status.DataPropertyName = "Fee_Status";
+            this.Fee_Status.HeaderText = "FeesStatus";
+            this.Fee_Status.MinimumWidth = 6;
+            this.Fee_Status.Name = "Fee_Status";
+            this.Fee_Status.ReadOnly = true;
+            this.Fee_Status.Width = 125;
             // 
-            // HostelID
+            // Hostel_id
             // 
-            this.HostelID.HeaderText = "HostelID";
-            this.HostelID.MinimumWidth = 6;
-            this.HostelID.Name = "HostelID";
-            this.HostelID.ReadOnly = true;
-            this.HostelID.Width = 125;
+            this.Hostel_id.DataPropertyName = "Hostel_id";
+            this.Hostel_id.HeaderText = "HostelID";
+            this.Hostel_id.MinimumWidth = 6;
+            this.Hostel_id.Name = "Hostel_id";
+            this.Hostel_id.ReadOnly = true;
+            this.Hostel_id.Width = 125;
             // 
             // Fee_Id
             // 
@@ -363,12 +385,22 @@ namespace Hostel_Management_System
             this.Fee_Id.Visible = false;
             this.Fee_Id.Width = 125;
             // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(21, 467);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1018, 353);
+            this.crystalReportViewer1.TabIndex = 40;
+            // 
             // Fee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(1351, 556);
+            this.ClientSize = new System.Drawing.Size(1351, 894);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnVisiter);
             this.Controls.Add(this.btnFee);
@@ -380,6 +412,7 @@ namespace Hostel_Management_System
             this.DoubleBuffered = true;
             this.Name = "Fee";
             this.Text = "Fee";
+            this.Load += new System.EventHandler(this.Fee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -411,11 +444,13 @@ namespace Hostel_Management_System
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
+        private System.Windows.Forms.Button btnreport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fees;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FeesStatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HostelID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fee_Status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hostel_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fee_Id;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
     }
 }

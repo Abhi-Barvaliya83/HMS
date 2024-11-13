@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,7 @@ namespace Hostel_Management_System
         {
             string query = $"UPDATE StudentInfo SET StudentName = '{txtStudentName.Text}', FatherName = '{txtFatherName.Text}', " +
                            $"Department = '{txtDepartment.Text}', Address = '{txtAddress.Text}', ContactNo = '{txtContactNo.Text}', " +
-                           $"Age = {txtAge.Text}, DOB = '{dtpDOB.Value}' WHERE StudentID = {StudentId}";
+                           $"Age = {txtAge.Text}, DOB = '{DOB.Value.ToString("yyyy-MM-dd")}' WHERE StudentID = {StudentId}";
 
             con.update(query).ExecuteNonQuery();
             MessageBox.Show("Student data updated!");
@@ -93,7 +94,7 @@ namespace Hostel_Management_System
         private void btnInsert_Click(object sender, EventArgs e)
         {
             string query = $"INSERT INTO StudentInfo (StudentName, FatherName, Department, Address, ContactNo, Age, DOB) " +
-                           $"VALUES ('{txtStudentName.Text}', '{txtFatherName.Text}', '{txtDepartment.Text}', '{txtAddress.Text}', '{txtContactNo.Text}', '{txtAge.Text}', '{DOB.Value}')";
+                           $"VALUES ('{txtStudentName.Text}', '{txtFatherName.Text}', '{txtDepartment.Text}', '{txtAddress.Text}', '{txtContactNo.Text}', '{txtAge.Text}', '{DOB.Value.ToString("yyyy-MM-dd")}')";
 
             con.insert(query).ExecuteNonQuery();
             MessageBox.Show("Student data inserted!");
@@ -129,7 +130,7 @@ namespace Hostel_Management_System
             txtAddress.Clear();
             txtContactNo.Clear();
             txtAge.Clear();
-            dtpDOB.Value = DateTime.Now;
+            DOB.Value = DateTime.Now;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -140,9 +141,9 @@ namespace Hostel_Management_System
             txtFatherName.Text = dataGridView1.Rows[e.RowIndex].Cells["FatherName"].Value.ToString();
             txtDepartment.Text = dataGridView1.Rows[e.RowIndex].Cells["Department"].Value.ToString();
             txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells["Address"].Value.ToString();
-            txtContactNo.Text = dataGridView1.Rows[e.RowIndex].Cells["ContactNo"].Value.ToString();
+            txtContactNo.Text = dataGridView1.Rows[e.RowIndex].Cells["ContactNO"].Value.ToString();
             txtAge.Text = dataGridView1.Rows[e.RowIndex].Cells["Age"].Value.ToString();
-            dtpDOB.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["DOB"].Value);
+            DOB.Value = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells["DOB1"].Value);
         }
     }
 }

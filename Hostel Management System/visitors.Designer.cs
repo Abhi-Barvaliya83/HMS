@@ -37,12 +37,6 @@ namespace Hostel_Management_System
             this.btnRoom = new System.Windows.Forms.Button();
             this.btnHostel = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.VisitorsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VisitorsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EntryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
@@ -60,6 +54,12 @@ namespace Hostel_Management_System
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEntryDate = new System.Windows.Forms.DateTimePicker();
+            this.VisitorsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VisitorsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeOut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EntryDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -154,55 +154,10 @@ namespace Hostel_Management_System
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(822, 332);
             this.dataGridView1.TabIndex = 38;
-            // 
-            // VisitorsID
-            // 
-            this.VisitorsID.HeaderText = "VisitorsID";
-            this.VisitorsID.MinimumWidth = 6;
-            this.VisitorsID.Name = "VisitorsID";
-            this.VisitorsID.ReadOnly = true;
-            this.VisitorsID.Width = 125;
-            // 
-            // VisitorsName
-            // 
-            this.VisitorsName.HeaderText = "VisitorsName";
-            this.VisitorsName.MinimumWidth = 6;
-            this.VisitorsName.Name = "VisitorsName";
-            this.VisitorsName.ReadOnly = true;
-            this.VisitorsName.Width = 125;
-            // 
-            // StudentName
-            // 
-            this.StudentName.HeaderText = "StudentName";
-            this.StudentName.MinimumWidth = 6;
-            this.StudentName.Name = "StudentName";
-            this.StudentName.ReadOnly = true;
-            this.StudentName.Width = 125;
-            // 
-            // TimeIN
-            // 
-            this.TimeIN.HeaderText = "TimeIN";
-            this.TimeIN.MinimumWidth = 6;
-            this.TimeIN.Name = "TimeIN";
-            this.TimeIN.ReadOnly = true;
-            this.TimeIN.Width = 125;
-            // 
-            // TimeOut
-            // 
-            this.TimeOut.HeaderText = "TimeOut";
-            this.TimeOut.MinimumWidth = 6;
-            this.TimeOut.Name = "TimeOut";
-            this.TimeOut.ReadOnly = true;
-            this.TimeOut.Width = 125;
-            // 
-            // EntryDate
-            // 
-            this.EntryDate.HeaderText = "EntryDate";
-            this.EntryDate.MinimumWidth = 6;
-            this.EntryDate.Name = "EntryDate";
-            this.EntryDate.Width = 125;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Delete
             // 
@@ -213,6 +168,7 @@ namespace Hostel_Management_System
             this.Delete.TabIndex = 37;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // btnUpdate
             // 
@@ -223,6 +179,7 @@ namespace Hostel_Management_System
             this.btnUpdate.TabIndex = 36;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
@@ -233,6 +190,7 @@ namespace Hostel_Management_System
             this.btnInsert.TabIndex = 35;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // txtTimeOut
             // 
@@ -379,6 +337,59 @@ namespace Hostel_Management_System
             this.txtEntryDate.Size = new System.Drawing.Size(100, 22);
             this.txtEntryDate.TabIndex = 39;
             // 
+            // VisitorsID
+            // 
+            this.VisitorsID.DataPropertyName = "VisitorsID";
+            this.VisitorsID.HeaderText = "VisitorsID";
+            this.VisitorsID.MinimumWidth = 6;
+            this.VisitorsID.Name = "VisitorsID";
+            this.VisitorsID.ReadOnly = true;
+            this.VisitorsID.Width = 125;
+            // 
+            // VisitorsName
+            // 
+            this.VisitorsName.DataPropertyName = "VisitorsName";
+            this.VisitorsName.HeaderText = "VisitorsName";
+            this.VisitorsName.MinimumWidth = 6;
+            this.VisitorsName.Name = "VisitorsName";
+            this.VisitorsName.ReadOnly = true;
+            this.VisitorsName.Width = 125;
+            // 
+            // StudentName
+            // 
+            this.StudentName.DataPropertyName = "StudentName";
+            this.StudentName.HeaderText = "StudentName";
+            this.StudentName.MinimumWidth = 6;
+            this.StudentName.Name = "StudentName";
+            this.StudentName.ReadOnly = true;
+            this.StudentName.Width = 125;
+            // 
+            // TimeIN
+            // 
+            this.TimeIN.DataPropertyName = "TimeIN";
+            this.TimeIN.HeaderText = "TimeIN";
+            this.TimeIN.MinimumWidth = 6;
+            this.TimeIN.Name = "TimeIN";
+            this.TimeIN.ReadOnly = true;
+            this.TimeIN.Width = 125;
+            // 
+            // TimeOut
+            // 
+            this.TimeOut.DataPropertyName = "TimeOut";
+            this.TimeOut.HeaderText = "TimeOut";
+            this.TimeOut.MinimumWidth = 6;
+            this.TimeOut.Name = "TimeOut";
+            this.TimeOut.ReadOnly = true;
+            this.TimeOut.Width = 125;
+            // 
+            // EntryDate
+            // 
+            this.EntryDate.DataPropertyName = "EntryDate";
+            this.EntryDate.HeaderText = "EntryDate";
+            this.EntryDate.MinimumWidth = 6;
+            this.EntryDate.Name = "EntryDate";
+            this.EntryDate.Width = 125;
+            // 
             // visitors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -395,6 +406,7 @@ namespace Hostel_Management_System
             this.Controls.Add(this.panel1);
             this.Name = "visitors";
             this.Text = "visitors";
+            this.Load += new System.EventHandler(this.visitors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -426,13 +438,13 @@ namespace Hostel_Management_System
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker txtEntryDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn VisitorsID;
         private System.Windows.Forms.DataGridViewTextBoxColumn VisitorsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeIN;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeOut;
         private System.Windows.Forms.DataGridViewTextBoxColumn EntryDate;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker txtEntryDate;
     }
 }

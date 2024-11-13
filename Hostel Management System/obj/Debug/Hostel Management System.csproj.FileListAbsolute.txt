@@ -31,3 +31,30 @@ C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Manage
 C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.csproj.CoreCompileInputs.cache
 C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.exe
 C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.pdb
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\hms_db.mdf
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\hms_db_log.ldf
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\Hostel Management System.exe.config
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\Hostel Management System.exe
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\Hostel Management System.pdb
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.CrystalReports.Design.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.Data.AdoDotNetInterop.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.VSDesigner.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.Web.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\CRVsPackageLib.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\EnvDTE.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\VSLangProj.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\VsWebSite.Interop.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\EnvDTE80.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\stdole.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.exe.config
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.csproj.CopyComplete
