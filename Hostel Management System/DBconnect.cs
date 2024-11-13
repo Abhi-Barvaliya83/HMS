@@ -10,7 +10,7 @@ namespace Hostel_Management_System
 {
     class DBconnect
     {
-        static string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\PRINCE\source\repos\Hostel Management System\Hostel Management System\hms_db.mdf';Integrated Security=True";
+        static string s = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\vansh\Source\Repos\HMS\Hostel Management System\hms_db.mdf';Integrated Security=True";
 
         private string connectionString = s;
 

@@ -76,6 +76,7 @@ namespace Hostel_Management_System
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(639, 332);
             this.dataGridView1.TabIndex = 38;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // MessID
@@ -127,6 +128,7 @@ namespace Hostel_Management_System
             this.Delete.TabIndex = 37;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // btnUpdate
             // 
@@ -137,6 +139,7 @@ namespace Hostel_Management_System
             this.btnUpdate.TabIndex = 36;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
@@ -147,6 +150,7 @@ namespace Hostel_Management_System
             this.btnInsert.TabIndex = 35;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // txtLocation
             // 
@@ -364,6 +368,7 @@ namespace Hostel_Management_System
             this.Controls.Add(this.btnHostel);
             this.Name = "Mess";
             this.Text = "Mess";
+            this.Load += new System.EventHandler(this.Mess_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

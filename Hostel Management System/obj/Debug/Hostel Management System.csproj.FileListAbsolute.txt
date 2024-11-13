@@ -17,3 +17,17 @@ C:\Users\PRINCE\source\repos\Hostel Management System\Hostel Management System\o
 C:\Users\PRINCE\source\repos\Hostel Management System\Hostel Management System\obj\Debug\Hostel_Management_System.visitors.resources
 C:\Users\PRINCE\source\repos\Hostel Management System\Hostel Management System\bin\Debug\hms_db.mdf
 C:\Users\PRINCE\source\repos\Hostel Management System\Hostel Management System\bin\Debug\hms_db_log.ldf
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.csproj.AssemblyReference.cache
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.Fee.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.Hostel.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.Login.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.Mess.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.Properties.Resources.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.Room.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.Student.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.visitors.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel_Management_System.Welcome.resources
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.csproj.GenerateResource.cache
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.csproj.CoreCompileInputs.cache
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.exe
+C:\Users\vansh\Source\Repos\HMS\Hostel Management System\obj\Debug\Hostel Management System.pdb
